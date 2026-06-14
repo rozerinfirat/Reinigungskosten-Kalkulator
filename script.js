@@ -1,6 +1,6 @@
 function berechnen() {
   const qm = Number(document.getElementById("qm").value);
-  const leistung = Number(document.getElementById("leistung").value);
+  const leistung = Number(document.getElementById("reinigungsart").value);
   const verschmutzung = Number(document.getElementById("verschmutzung").value);
   const stundenlohn = Number(document.getElementById("stundenlohn").value);
   const material = Number(document.getElementById("material").value);
