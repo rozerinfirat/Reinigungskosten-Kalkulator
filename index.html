@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -7,22 +7,38 @@ DOCTYPE html>
 <body>
   <h1>Reinigungskosten-Kalkulator</h1>
 
-  <label>Arbeitsstunden:</label>
-  <input id="stunden" type="number"><br><br>
+  <label>Quadratmeter:</label>
+  <input id="qm" type="number"><br><br>
+
+  <label>Reinigungsart:</label>
+<select id="reinigungsart">
+  <option value="120">Standardreinigung</option>
+  <option value="80">Grundreinigung</option>
+  <option value="40">Bauendreinigung</option>
+  <option value="25">Stark verschmutzte Sonderreinigung</option>
+</select><br><br>
+
+  <label>Verschmutzungsgrad:</label>
+  <select id="verschmutzung">
+    <option value="1">Leicht</option>
+    <option value="1.25">Mittel</option>
+    <option value="1.5">Stark</option>
+  </select><br><br>
 
   <label>Stundenlohn (€):</label>
-  <input id="stundenlohn" type="number"><br><br>
+  <input id="stundenlohn" type="number" value="30"><br><br>
 
   <label>Materialkosten (€):</label>
   <input id="material" type="number"><br><br>
 
   <label>Marge (%):</label>
-  <input id="marge" type="number"><br><br>
+  <input id="marge" type="number" value="20"><br><br>
 
   <button onclick="berechnen()">Berechnen</button>
 
   <h2 id="ergebnis">Angebotspreis: -</h2>
+  <p id="details"></p>
 
-  <script src="Script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
