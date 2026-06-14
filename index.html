@@ -7,14 +7,22 @@
 <body>
   <h1>Reinigungskosten-Kalkulator</h1>
 
-  <p>Dieses Projekt berechnet später Reinigungskosten für Angebote.</p>
+  <label>Arbeitsstunden:</label>
+  <input id="stunden" type="number"><br><br>
 
-  <h2>Geplante Eingaben</h2>
-  <ul>
-    <li>Quadratmeter</li>
-    <li>Stundenlohn</li>
-    <li>Materialkosten</li>
-    <li>Gewinnmarge</li>
-  </ul>
+  <label>Stundenlohn (€):</label>
+  <input id="stundenlohn" type="number"><br><br>
+
+  <label>Materialkosten (€):</label>
+  <input id="material" type="number"><br><br>
+
+  <label>Marge (%):</label>
+  <input id="marge" type="number"><br><br>
+
+  <button onclick="berechnen()">Berechnen</button>
+
+  <h2 id="ergebnis">Angebotspreis: -</h2>
+
+  <script src="script.js"></script>
 </body>
 </html>
