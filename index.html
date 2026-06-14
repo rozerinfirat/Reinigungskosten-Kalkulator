@@ -7,16 +7,25 @@
 <body>
   <h1>Reinigungskosten-Kalkulator</h1>
 
-  <label>Quadratmeter:</label>
-  <input id="qm" type="number"><br><br>
+  <label>Objektart:</label>
+  <select id="objektart">
+    <option>Büro</option>
+    <option>Treppenhaus</option>
+    <option>Praxis</option>
+    <option>Schule</option>
+    <option>Lagerhalle</option>
+  </select><br><br>
 
   <label>Reinigungsart:</label>
-<select id="reinigungsart">
-  <option value="120">Standardreinigung</option>
-  <option value="80">Grundreinigung</option>
-  <option value="40">Bauendreinigung</option>
-  <option value="25">Stark verschmutzte Sonderreinigung</option>
-</select><br><br>
+  <select id="reinigungsart">
+    <option value="120">Standardreinigung</option>
+    <option value="80">Grundreinigung</option>
+    <option value="40">Bauendreinigung</option>
+    <option value="25">Sonderreinigung</option>
+  </select><br><br>
+
+  <label>Quadratmeter:</label>
+  <input id="qm" type="number"><br><br>
 
   <label>Verschmutzungsgrad:</label>
   <select id="verschmutzung">
@@ -25,13 +34,22 @@
     <option value="1.5">Stark</option>
   </select><br><br>
 
+  <label>Anzahl Mitarbeiter:</label>
+  <input id="mitarbeiter" type="number" value="1"><br><br>
+
   <label>Stundenlohn (€):</label>
   <input id="stundenlohn" type="number" value="30"><br><br>
 
-  <label>Materialkosten (€):</label>
-  <input id="material" type="number"><br><br>
+  <label>Materialkosten pro qm (€):</label>
+  <input id="materialProQm" type="number" value="0.05" step="0.01"><br><br>
 
-  <label>Marge (%):</label>
+  <label>Entfernung einfache Strecke (km):</label>
+  <input id="km" type="number" value="0"><br><br>
+
+  <label>Fahrtkosten pro km (€):</label>
+  <input id="fahrtkostenProKm" type="number" value="0.50" step="0.01"><br><br>
+
+  <label>Gewinnmarge (%):</label>
   <input id="marge" type="number" value="20"><br><br>
 
   <button onclick="berechnen()">Berechnen</button>
